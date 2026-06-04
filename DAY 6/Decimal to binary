@@ -1,0 +1,14 @@
+#include <iostream>
+#include <bitset>
+using namespace std;
+
+int main() {
+    int decimal;
+    
+    cout << "Enter a decimal number: ";
+    cin >> decimal;
+
+    cout << "Binary equivalent: " << bitset<16>(decimal) << endl;
+
+    return 0;
+}
