@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+int primeN(int n){
+    for(int i=2; i<=n-1; i++){
+        if(n%i==0){
+            return false;
+        }
+    }
+    return true;
+}
+int main(){
+    int n;
+    cout<<"Enter the number:";
+    cin>>n;
+    if(n==1){
+        cout<<"The number is unique";
+    }
+    cout<<"If the output is 0 then not prime if 1 then prime"<<endl;
+    cout<<primeN(n);
+    return 0;
+}
