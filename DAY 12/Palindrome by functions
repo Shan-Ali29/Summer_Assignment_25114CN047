@@ -1,0 +1,24 @@
+ #include <iostream>
+ using namespace std;
+ int palindromeN(int n){
+    int d,rev=0,original=n;
+    
+    while(n>0){
+        d=n%10;
+        rev=rev*10+d;
+        n=n/10;
+    }
+    return original==rev;
+ }
+ int main(){
+    int n;
+    cout<<"Enter the digit:";
+    cin>>n;
+    if(palindromeN(n)){
+        cout<<"The number "<< n <<" is palindrome";
+    }
+    else{
+        cout<<"The number "<<n<<" is not palindrome";
+    }
+    return 0;
+ }
