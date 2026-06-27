@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int secret=25,guess;
+    cout<<"Guess the number:";
+    cin>>guess;
+    if(guess==secret){
+        cout<<"Yayy!!You guessed it right";
+    }
+    else if(guess>secret){
+        cout<<"Too high";
+    }
+    else{
+        cout<<"Too low";
+    }
+    return 0;
+}
