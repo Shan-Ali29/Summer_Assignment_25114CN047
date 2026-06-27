@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int answer, score = 0;
+
+    cout << "Quiz Application\n\n";
+
+    cout << "Q1. Capital of India?\n";
+    cout << "1. Mumbai\n2. Delhi\n3. Chennai\n4. Kolkata\n";
+    cin >> answer;
+
+    if (answer == 2)
+        score++;
+
+    cout << "\nQ2. 5 + 3 = ?\n";
+    cout << "1. 6\n2. 7\n3. 8\n4. 9\n";
+    cin >> answer;
+
+    if (answer == 3)
+        score++;
+
+    cout << "\nQ3. C++ was developed as an extension of?\n";
+    cout << "1. Java\n2. Python\n3. C\n4. HTML\n";
+    cin >> answer;
+
+    if (answer == 3)
+        score++;
+
+    cout << "\nYour Score = " << score << " out of 3";
+
+    return 0;
+}
