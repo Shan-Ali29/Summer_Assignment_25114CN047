@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int pin = 1234, enteredPin;
+    int choice;
+    float balance = 5000, amount;
+
+    cout << "Enter PIN: ";
+    cin >> enteredPin;
+
+    if (enteredPin != pin)
+    {
+        cout << "Invalid PIN";
+        return 0;
+    }
+
+    cout << "\n1. Check Balance";
+    cout << "\n2. Deposit";
+    cout << "\n3. Withdraw";
+    cout << "\nEnter your choice: ";
+    cin >> choice;
+
+    switch (choice)
+    {
+        case 1:
+            cout << "Balance = " << balance;
+            break;
+
+        case 2:
+            cout << "Enter amount to deposit: ";
+            cin >> amount;
+            balance = balance + amount;
+            cout << "New Balance = " << balance;
+            break;
+
+        case 3:
+            cout << "Enter amount to withdraw: ";
+            cin >> amount;
+
+            if (amount <= balance)
+            {
+                balance = balance - amount;
+                cout << "Remaining Balance = " << balance;
+            }
+            else
+            {
+                cout << "Insufficient Balance";
+            }
+            break;
+
+        default:
+            cout << "Invalid Choice";
+    }
+
+    return 0;
+}
