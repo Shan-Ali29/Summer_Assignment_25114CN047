@@ -1,0 +1,51 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main()
+{
+    char str1[50], str2[50];
+    int choice;
+
+    cout << "Enter First String: ";
+    cin >> str1;
+
+    cout << "Enter Second String: ";
+    cin >> str2;
+
+    cout << "\n1. Length of First String";
+    cout << "\n2. Copy Second to First";
+    cout << "\n3. Concatenate Strings";
+    cout << "\n4. Compare Strings";
+    cout << "\nEnter Choice: ";
+    cin >> choice;
+
+    switch(choice)
+    {
+        case 1:
+            cout << "Length = " << strlen(str1);
+            break;
+
+        case 2:
+            strcpy(str1, str2);
+            cout << "Copied String = " << str1;
+            break;
+
+        case 3:
+            strcat(str1, str2);
+            cout << "Concatenated String = " << str1;
+            break;
+
+        case 4:
+            if(strcmp(str1, str2) == 0)
+                cout << "Strings are Equal";
+            else
+                cout << "Strings are Not Equal";
+            break;
+
+        default:
+            cout << "Invalid Choice";
+    }
+
+    return 0;
+}
