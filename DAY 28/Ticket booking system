@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+class Ticket
+{
+    int ticketNo;
+    string passenger;
+    string destination;
+
+public:
+    void book()
+    {
+        cout << "Enter Ticket Number: ";
+        cin >> ticketNo;
+        cout << "Enter Passenger Name: ";
+        cin >> passenger;
+        cout << "Enter Destination: ";
+        cin >> destination;
+    }
+
+    void display()
+    {
+        cout << "\nTicket Number: " << ticketNo;
+        cout << "\nPassenger Name: " << passenger;
+        cout << "\nDestination: " << destination << endl;
+    }
+};
+
+int main()
+{
+    Ticket t;
+    t.book();
+    t.display();
+    return 0;
+}
