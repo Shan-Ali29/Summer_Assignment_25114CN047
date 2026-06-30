@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+class Employee
+{
+    int empId;
+    char name[30];
+    float salary;
+
+public:
+    void getData()
+    {
+        cout << "Enter Employee ID: ";
+        cin >> empId;
+        cout << "Enter Employee Name: ";
+        cin >> name;
+        cout << "Enter Salary: ";
+        cin >> salary;
+    }
+
+    void display()
+    {
+        cout << "\nEmployee ID: " << empId;
+        cout << "\nName: " << name;
+        cout << "\nSalary: " << salary << endl;
+    }
+};
+
+int main()
+{
+    Employee e[3];
+    int i;
+
+    for(i = 0; i < 3; i++)
+        e[i].getData();
+
+    cout << "\nEmployee Records\n";
+
+    for(i = 0; i < 3; i++)
+        e[i].display();
+
+    return 0;
+}
