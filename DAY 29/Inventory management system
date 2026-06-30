@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+class Inventory
+{
+    int itemNo, quantity;
+    char itemName[30];
+    float price;
+
+public:
+    void getData()
+    {
+        cout << "Enter Item Number: ";
+        cin >> itemNo;
+
+        cout << "Enter Item Name: ";
+        cin >> itemName;
+
+        cout << "Enter Quantity: ";
+        cin >> quantity;
+
+        cout << "Enter Price: ";
+        cin >> price;
+    }
+
+    void display()
+    {
+        cout << "\nItem Number : " << itemNo;
+        cout << "\nItem Name   : " << itemName;
+        cout << "\nQuantity    : " << quantity;
+        cout << "\nPrice       : " << price;
+    }
+};
+
+int main()
+{
+    Inventory i;
+
+    i.getData();
+    i.display();
+
+    return 0;
+}
